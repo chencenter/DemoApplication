@@ -1,4 +1,4 @@
-package com.center.demoapplication.splash;
+package com.center.demoapplication.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 
-import com.center.demoapplication.MainActivity;
 import com.center.demoapplication.R;
 
 public class SplashActivity extends AppCompatActivity {

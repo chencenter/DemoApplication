@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.center.demoapplication.MainActivity">
+    tools:context="com.center.demoapplication.activity.MainActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -31,7 +31,6 @@
             android:id="@+id/rb_one"
             android:drawableTop="@drawable/select_tab1"
             style="@style/bottom_tab"
-            android:checked="true"
             android:text="本地视频"/>
         <RadioButton
             android:id="@+id/rb_two"
