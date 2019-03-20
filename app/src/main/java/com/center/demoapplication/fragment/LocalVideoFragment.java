@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.center.demoapplication.R;
+import com.center.demoapplication.activity.SystemVideoActivity;
 import com.center.demoapplication.adapter.LocalVideoAdapter;
 import com.center.demoapplication.base.BaseFragment;
 import com.center.demoapplication.bean.MediaItemBean;
@@ -78,7 +79,10 @@ public class LocalVideoFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 MediaItemBean bean = list.get(position);
                 //调用系统已经存在的播放器-隐式意图
-                Intent intent = new Intent();
+//                Intent intent = new Intent();
+//                intent.setDataAndType(Uri.parse(bean.getData()),"video/*");
+//                context.startActivity(intent);
+                Intent intent = new Intent(context, SystemVideoActivity.class);
                 intent.setDataAndType(Uri.parse(bean.getData()),"video/*");
                 context.startActivity(intent);
             }

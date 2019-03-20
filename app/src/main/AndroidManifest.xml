@@ -31,9 +31,10 @@
         <!-- 防止多次跳转到主页面android:launchMode="singleTask" -->
         <activity
             android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.SystemVideoActivity"></activity>
+        <activity android:name=".activity.SystemVideoActivity"/>
     </application>
 
 </manifest>
