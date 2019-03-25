@@ -19,11 +19,18 @@ import com.center.demoapplication.fragment.LocalVideoFragment;
 import com.center.demoapplication.fragment.NetAutioFragment;
 import com.center.demoapplication.fragment.NetVideoFragment;
 
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
+
 import java.util.ArrayList;
 
+@ContentView(R.layout.activity_main)
 public class MainActivity extends FragmentActivity {
 
+    @ViewInject(R.id.fl_content)
     private FrameLayout frameLayout;
+    @ViewInject(R.id.rg_bottom_tag)
     private RadioGroup radioGroup;
     private ArrayList<Fragment> fragments;
     private int position;
@@ -34,9 +41,13 @@ public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        frameLayout = findViewById(R.id.fl_content);
-        radioGroup = findViewById(R.id.rg_bottom_tag);
+//        setContentView(R.layout.activity_main);
+        x.view().inject(this);
+
+
+
+//        frameLayout = findViewById(R.id.fl_content);
+//        radioGroup = findViewById(R.id.rg_bottom_tag);
         //Android6.0动态获取权限
         isGrantExternalRW(this);
         fragments = new ArrayList<>();

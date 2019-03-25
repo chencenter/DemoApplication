@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -54,14 +56,24 @@ public class LocalVideoFragment extends BaseFragment {
         }
     };
 
+//    @Override
+//    public View initViews() {
+//        View view = View.inflate(context, R.layout.fragment_local_video,null);
+//        listView = view.findViewById(R.id.listview);
+//        textView = view.findViewById(R.id.tv_show);
+//        progressBar = view.findViewById(R.id.pb_loading);
+//        return view;
+//    }
+
     @Override
-    public View initViews() {
-        View view = View.inflate(context, R.layout.fragment_local_autio,null);
+    public View initViews(LayoutInflater inflater, ViewGroup container) {
+        View view = View.inflate(context, R.layout.fragment_local_video,null);
         listView = view.findViewById(R.id.listview);
         textView = view.findViewById(R.id.tv_show);
         progressBar = view.findViewById(R.id.pb_loading);
         return view;
     }
+
     @Override
     public void initData() {
         super.initData();

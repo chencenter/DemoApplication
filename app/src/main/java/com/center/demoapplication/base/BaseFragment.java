@@ -37,7 +37,7 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return initViews();
+        return initViews(inflater, container);
     }
 
     /**
@@ -45,7 +45,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @return
      */
-    public abstract View initViews() ;
+    public abstract View initViews(LayoutInflater inflater, ViewGroup container) ;
     /**
      * 当Activty创建成功的时候回调该方法
      * 初始化数据：
