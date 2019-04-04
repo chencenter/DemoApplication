@@ -1,5 +1,6 @@
 package com.center.demoapplication.fragment;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.center.demoapplication.R;
+import com.center.demoapplication.activity.ThemeSelectActivity;
 import com.center.demoapplication.base.BaseFragment;
 
 import org.xutils.view.annotation.ContentView;
@@ -41,7 +43,7 @@ public class LocalAutioFragment extends BaseFragment {
     @Override
     public void initData() {
         super.initData();
-//        textView.setText("本地音乐");
+        textView.setText("本地音乐");
     }
 
 //    @Override
@@ -50,7 +52,7 @@ public class LocalAutioFragment extends BaseFragment {
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                textView.setText("本地音乐");
+//               startActivity(new Intent(context, ThemeSelectActivity.class));
 //            }
 //        });
 //    }
@@ -59,7 +61,8 @@ public class LocalAutioFragment extends BaseFragment {
     private void onEvent(View view){
         switch (view.getId()){
             case R.id.btn_show:
-                textView.setText("本地音乐");
+//                textView.setText("本地音乐");
+                startActivity(new Intent(context, ThemeSelectActivity.class));
                 break;
         }
     }

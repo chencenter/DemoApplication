@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--MultipleTheme自定义view是为了在setTheme后会去立即刷新，更新页面UI对应资源-->
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="main_textcolor" format="reference|color"/>
+    <attr name="second_bg" format="reference|color"/>
+    <attr name="second_textcolor" format="reference|color"/>
+    <!--手动绑定view和要改变的资源类型-->
+    <attr name="root_view_bg" format="reference|color" />
+    <attr name="btn_bg" format="reference|color" />
+    <attr name="text_color" format="reference|color" />
+</resources>
